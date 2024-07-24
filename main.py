@@ -25,7 +25,7 @@ def get_amountOfUsedMessages(folderType: str):
 
 
 def get_mailUris(amountOfMails: int, folderType: str, offset: int = 0):
-    # If offset is not wokring properly, just run the script twice
+    # If offset is not working properly, just run the script twice
     url = f"https://maillist.gmx.net/Mailbox/Mail?no_cache=a8d8e12c-09c2-6167-3246-e5e390fc908b&folderTypeOrId={folderType}&offset={offset}&amount={amountOfMails}&orderBy=DATE+DESC"
     headers = {"Authorization": BEARER_TOKEN_TO_RETRIEVE}
     response = requests.get(url, headers=headers)
